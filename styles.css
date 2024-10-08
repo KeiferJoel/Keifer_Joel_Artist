@@ -9,6 +9,12 @@ body {
     background-color: #111;
     color: #fff;
     line-height: 1.6;
+
+
+    -webkit-user-select: none; /* Para navegadores basados en WebKit (Chrome, Safari) */
+  -moz-user-select: none;    /* Para Firefox */
+  -ms-user-select: none;     /* Para IE/Edge */
+  user-select: none;         /* Estándar */
     
 }
 
@@ -21,10 +27,11 @@ header {
 
 header img {
     
-width: auto;
-height: auto;
+width: 448px;
+height: 81px;
 
 }
+
 
 header p {
     font-size: 1.2rem;
@@ -140,6 +147,14 @@ footer {
     .album-cover {
         max-width: 250px;
     }
+
+
+    header img {
+    
+        width: 224px;
+        height: 40.5px;
+        
+        }
 }
 
 @media (max-width: 480px) {
@@ -147,6 +162,16 @@ footer {
         font-size: 2.5rem;
         letter-spacing: 2px;
     }
+
+
+
+    header img {
+    
+        width: 149.33px;
+        height: 27px;
+        
+        }
+
 
     .textoenbarra {
         font-size: 0.9rem;
