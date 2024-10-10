@@ -10,13 +10,115 @@ body {
     color: #fff;
     line-height: 1.6;
 
+    
+    
 
-    -webkit-user-select: none; /* Para navegadores basados en WebKit (Chrome, Safari) */
-  -moz-user-select: none;    /* Para Firefox */
-  -ms-user-select: none;     /* Para IE/Edge */
-  user-select: none;         /* Estándar */
+
+  -webkit-user-select: none; 
+  -moz-user-select: none;   
+  -ms-user-select: none;   
+  user-select: none;         
     
 }
+
+/* Estilos para el cargador */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, hsl(0, 0%, 3%), #1a1a1a); /* Fondo negro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Asegurarse de que esté al frente */
+
+
+    
+
+  }
+
+  #loaderLogo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001; /* Asegurarse de que esté al frente */
+
+
+    
+
+  }
+
+.Logo {
+  width: 100px;
+  height: 100px;
+  transform: translate(2px, -50px); /* Mueve la Logo 25 píxeles hacia arriba y 1 píxel a la derecha */
+}
+
+  
+  /* Estilo del spinner (animación de carga) */
+/* From Uiverse.io by bernethe */ 
+.spinner{
+    border-radius: 10%;
+    border-top: 16px rgba(255, 255, 255, 0.75) solid;
+    border-left: 16px rgba(255, 255, 255, 0.25) solid;
+    border-bottom: 16px rgba(255, 255, 255, 0.25) solid;
+    border-right: 16px rgba(255, 255, 255, 0.25) solid;
+    animation: spSlices 1s infinite linear;
+  }
+  
+  @keyframes spSlices {
+    0% {
+      border-top: 16px rgba(255, 255, 255, 0.75) solid;
+      border-right: 16px rgba(255, 255, 255, 0.25) solid;
+      border-bottom: 16px rgba(255, 255, 255, 0.25) solid;
+      border-left: 16px rgba(255, 255, 255, 0.25) solid;
+    }
+  
+    25% {
+      border-top: 16px rgba(255, 255, 255, 0.25) solid;
+      border-right: 16px rgba(255, 255, 255, 0.75) solid;
+      border-bottom: 16px rgba(255, 255, 255, 0.25) solid;
+      border-left: 16px rgba(255, 255, 255, 0.25) solid;
+    }
+  
+    50% {
+      border-top: 16px rgba(255, 255, 255, 0.25) solid;
+      border-right: 16px rgba(255, 255, 255, 0.25) solid;
+      border-bottom: 16px rgba(255, 255, 255, 0.75) solid;
+      border-left: 16px rgba(255, 255, 255, 0.25) solid;
+    }
+  
+    75% {
+      border-top: 16px rgba(255, 255, 255, 0.25) solid;
+      border-right: 16px rgba(255, 255, 255, 0.25) solid;
+      border-bottom: 16px rgba(255, 255, 255, 0.25) solid;
+      border-left: 16px rgba(255, 255, 255, 0.75) solid;
+    }
+  
+    100% {
+      border-top: 16px rgba(255, 0, 0, 0.75) solid;
+      border-right: 16px rgba(255, 0, 0, 0.25) solid;
+      border-bottom: 16px rgba(255, 0, 0, 0.25) solid;
+      border-left: 16px rgba(255, 0, 0, 0.25) solid;
+    }
+  }
+  
+
+#overlay{
+    position:absolute;
+    width:100vw;
+    height:100vh;
+    background-image:linear-gradient(transparent,rgba(0,0,0,0.5));
+    z-index:1
+  }
 
 header {
     background-color: #222;
@@ -32,6 +134,66 @@ height: 81px;
 
 }
 
+.hero{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    
+    
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.hero:after {
+    content: "";
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Dissolve_Noise_Texture.png");
+    height: 900%;
+    width: 900%;
+    position: fixed;
+    opacity: 0.080;
+    animation: animateGrain 8s steps(10) infinite;
+    pointer-events: none;
+}
+
+
+  @keyframes animateGrain{
+    0%, 100% { transform:translate(0, 0) }
+    10%{
+      transform:translate(-5%,-10%)
+    }
+    20%{
+      transform:translate(-15%,-20%)
+    }
+    30%{
+      transform:translate(-5%,-10%)
+    }
+    40%{
+      transform:translate(-15%,-20%)
+    }
+    
+    50%{
+      transform:translate(-5%,-10%)
+    }
+    60%{
+      transform:translate(-15%,-20%)
+    }
+    70%{
+      transform:translate(-5%,-10%)
+    }
+    80%{
+      transform:translate(-15%,-20%)
+    }
+    90%{
+      transform:translate(-5%,-10%)
+    }
+    100%{
+      transform:translate(-15%,-20%)
+    }
+   
+  }
 
 header p {
     font-size: 1.2rem;
@@ -91,6 +253,8 @@ header p {
     background-color: #111;
     border-top: 2px solid #900;
     border-bottom: 2px solid #900;
+    background-image:linear-gradient(transparent,rgba(0,0,0,0.5));
+    
 }
 
 .album-cover {
@@ -102,7 +266,7 @@ header p {
 
 #album h2 {
     font-size: 3rem;
-    color: #f00;
+    color: rgb(255, 0, 0);
     margin-top: 20px;
     letter-spacing: 3px;
     text-transform: uppercase;
