@@ -1,0 +1,401 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #111;
+    color: #fff;
+    line-height: 1.6;
+
+    
+    
+
+
+  -webkit-user-select: none; 
+  -moz-user-select: none;   
+  -ms-user-select: none;   
+  user-select: none;         
+    
+}
+
+/* Estilos para el cargador */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, hsl(0, 0%, 3%), #1a1a1a); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
+
+    
+
+  }
+
+  #loaderLogo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001; 
+
+
+    
+
+  }
+
+.Logo {
+  width: 100px;
+  height: 100px;
+  transform: translate(2px, -50px); 
+}
+
+  
+
+.spinner{
+    border-radius: 10%;
+    border-top: 16px rgba(255, 255, 255, 0.75) solid;
+    border-left: 16px rgba(255, 255, 255, 0.25) solid;
+    border-bottom: 16px rgba(255, 255, 255, 0.25) solid;
+    border-right: 16px rgba(255, 255, 255, 0.25) solid;
+    animation: spSlices 1s infinite linear;
+  }
+  
+  @keyframes spSlices {
+    0% {
+      border-top: 16px rgba(255, 255, 255, 0.75) solid;
+      border-right: 16px rgba(255, 255, 255, 0.25) solid;
+      border-bottom: 16px rgba(255, 255, 255, 0.25) solid;
+      border-left: 16px rgba(255, 255, 255, 0.25) solid;
+    }
+  
+    25% {
+      border-top: 16px rgba(255, 255, 255, 0.25) solid;
+      border-right: 16px rgba(255, 255, 255, 0.75) solid;
+      border-bottom: 16px rgba(255, 255, 255, 0.25) solid;
+      border-left: 16px rgba(255, 255, 255, 0.25) solid;
+    }
+  
+    50% {
+      border-top: 16px rgba(255, 255, 255, 0.25) solid;
+      border-right: 16px rgba(255, 255, 255, 0.25) solid;
+      border-bottom: 16px rgba(255, 255, 255, 0.75) solid;
+      border-left: 16px rgba(255, 255, 255, 0.25) solid;
+    }
+  
+    75% {
+      border-top: 16px rgba(255, 255, 255, 0.25) solid;
+      border-right: 16px rgba(255, 255, 255, 0.25) solid;
+      border-bottom: 16px rgba(255, 255, 255, 0.25) solid;
+      border-left: 16px rgba(255, 255, 255, 0.75) solid;
+    }
+  
+    100% {
+      border-top: 16px rgba(255, 0, 0, 0.75) solid;
+      border-right: 16px rgba(255, 0, 0, 0.25) solid;
+      border-bottom: 16px rgba(255, 0, 0, 0.25) solid;
+      border-left: 16px rgba(255, 0, 0, 0.25) solid;
+    }
+  }
+  
+
+#overlay{
+    position:absolute;
+    width:100vw;
+    height:100vh;
+    background-image:linear-gradient(transparent,rgba(0,0,0,0.5));
+    z-index:1
+  }
+
+header {
+    background-color: #161616;
+    padding: 50px;
+    text-align: center;
+    border-bottom: 2px solid #2E4A52;
+}
+
+header img {
+    
+width: 448px;
+height: 81px;
+
+}
+
+.hero{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    
+    
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.hero:after {
+    content: "";
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Dissolve_Noise_Texture.png");
+    height: 900%;
+    width: 900%;
+    position: fixed;
+    opacity: 0.080;
+    animation: animateGrain 8s steps(10) infinite;
+    pointer-events: none;
+}
+
+
+  @keyframes animateGrain{
+    0%, 100% { transform:translate(0, 0) }
+    10%{
+      transform:translate(-5%,-10%)
+    }
+    20%{
+      transform:translate(-15%,-20%)
+    }
+    30%{
+      transform:translate(-5%,-10%)
+    }
+    40%{
+      transform:translate(-15%,-20%)
+    }
+    
+    50%{
+      transform:translate(-5%,-10%)
+    }
+    60%{
+      transform:translate(-15%,-20%)
+    }
+    70%{
+      transform:translate(-5%,-10%)
+    }
+    80%{
+      transform:translate(-15%,-20%)
+    }
+    90%{
+      transform:translate(-5%,-10%)
+    }
+    100%{
+      transform:translate(-15%,-20%)
+    }
+   
+  }
+
+
+  @keyframes animah1 {
+
+    0%{color: rgba(255, 0, 0, 0);}
+    50%{color: rgba(255, 0, 0, 0.518);}
+    100%{color: rgb(255, 0, 0);}
+  }
+
+
+.barraCodigo{
+  animation: animah1 0.3s infinite alternate ;
+ height: 10px;
+ width: 10px;
+ 
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #aaa;
+    margin-top: 10px;
+}
+
+#music {
+    text-align: center;
+    padding: 50px;
+    background-color: #1a1a1a;
+    border-top: 2px solid #900;
+}
+
+#music h2 {
+  font-family: "Teko", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+    font-size: 2.5rem;
+    color: #f00;
+}
+
+.platforms a {
+    color: #f00;
+    font-size: 1.5rem;
+    margin: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 2px solid #900;
+    border-radius: 35px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.platforms a:hover {
+    background-color: #900;
+    color: #fff;
+}
+
+
+
+#about {
+    padding: 50px;
+    background-color: #1a1a1a;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    color: #f00;
+    font-family: "Teko", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+}
+
+#about p {
+    font-size: 1.2rem;
+    color: #bbb;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.album-container {
+    text-align: center;
+    padding: 50px;
+    background-color: #111;
+    border-top: 2px solid #900;
+    border-bottom: 2px solid #900;
+    background-image:linear-gradient(transparent,rgba(0,0,0,0.5));
+    
+}
+
+.album-cover {
+    max-width: 300px;
+    height: auto;
+    border: 5px solid #900;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+}
+
+#album h2 {
+    font-size: 3rem;
+    color: rgb(255, 0, 0);
+    margin-top: 20px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: 3px 3px #282828a1;
+}
+
+.albumName {
+  font-family: "Teko", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+footer {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+    color: #777;
+    font-size: 0.9rem;
+    border-top: 2px solid #2E4A52;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 3rem;
+        letter-spacing: 3px;
+    }
+
+    .textoenbarra {
+        font-size: 1rem;
+    }
+
+    #music h2,
+    #about h2,
+    #album h2 {
+        font-size: 2rem;
+    }
+
+    .platforms a {
+        font-size: 1.2rem;
+        padding: 8px 16px;
+    }
+
+    #about p {
+        font-size: 1rem;
+    }
+
+    .album-cover {
+        max-width: 250px;
+    }
+
+
+    header img {
+    
+        width: 224px;
+        height: 40.5px;
+        
+        }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+    }
+
+
+
+    header img {
+    
+        width: 149.33px;
+        height: 27px;
+        
+        }
+
+
+    .textoenbarra {
+        font-size: 0.9rem;
+    }
+
+    #music h2,
+    #about h2,
+    #album h2 {
+        font-size: 1.5rem;
+    }
+
+    .platforms a {
+        font-size: 1rem;
+        padding: 6px 12px;
+    }
+
+    #about p {
+        font-size: 0.9rem;
+    }
+
+    .album-cover {
+        max-width: 200px;
+    }
+}
+
+.textoenbarra {
+    font-family: "Libre Barcode 39 Text", system-ui;
+    font-weight: 400;
+    font-size: 50px;
+    font-style: normal;
+  }
+  
