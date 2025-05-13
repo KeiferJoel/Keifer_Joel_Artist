@@ -120,7 +120,7 @@ body {
   }
 
 header {
-    background-color: #222;
+    background-color: #161616;
     padding: 50px;
     text-align: center;
     border-bottom: 2px solid #900;
@@ -238,6 +238,7 @@ header p {
     padding: 10px 20px;
     text-decoration: none;
     border: 2px solid #900;
+    border-radius: 35px;
     display: inline-block;
     transition: 0.3s;
 }
@@ -246,6 +247,8 @@ header p {
     background-color: #900;
     color: #fff;
 }
+
+
 
 #about {
     padding: 50px;
